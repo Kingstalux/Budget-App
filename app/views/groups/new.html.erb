@@ -1,0 +1,23 @@
+<h1>Add a new category here</h1>
+
+<%= form_with model: @group do |f| %>
+      
+  <div class="mb-3">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true, class: "form-control"%>
+  </div>
+
+  <div class="mb-3">
+      <%= f.label :icon %>
+      <%= f.text_field :icon, required: true, class: "form-control"%>
+  </div>
+
+  <div class="mb-3">
+      <%= f.submit class: "btn btn-primary" %>
+  </div>
+      
+<% end %>
+
+<%= link_to '/', :remote => true do %>
+  <input type="button" class="btn btn-primary" value="Back">
+<% end %>
