@@ -1,3 +1,19 @@
-<h1>This is the home page for a signed in user</h1>
 <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
 <%= link_to "Sign out", destroy_user_session_path, method: :get %>
+
+<h1>All categories for this user</h1>
+
+<section class="container">
+    <%@groups.each do |group|%>
+      <div class="categroy">
+        <h3><%=group.name%></h3>
+        <img src=<%=group.icon%> alt="icon">
+      </div>
+    <%end%>
+</section>
+
+<div class="add-btn">
+  <%= link_to 'groups/new', :remote => true do %>
+    <input type="button" class="btn btn-primary" value="Add Category">
+  <% end %>
+</div>
