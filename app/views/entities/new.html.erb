@@ -1,6 +1,6 @@
-<h1>Add a new category here</h1>
+<h1>Add a new transaction here</h1>
 
-<%= form_with model: @group do |f| %>
+<%= form_with model: @entity do |f| %>
       
   <div class="mb-3">
       <%= f.label :name %>
@@ -8,8 +8,8 @@
   </div>
 
   <div class="mb-3">
-      <%= f.label :amount %>
-      <%= f.number_field :amount, required: true, min: 1, class: "form-control"%>
+      <%= f.label :icon %>
+      <%= f.text_field :icon, required: true, class: "form-control"%>
   </div>
 
   <div class="mb-3">
@@ -18,6 +18,6 @@
       
 <% end %>
 
-<%= link_to '/', :remote => true do %>
+<%= link_to group_entities_path(@group.id), :remote => true do %>
   <input type="button" class="btn btn-primary" value="Back">
 <% end %>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :home, only: [:index]
-  resources :groups, only: [:index, :new, :create] do
+  resources :groups, only: [:index, :new, :create, :destroy] do
     resources :entities, only: [:index, :new, :create]
   end
 

@@ -1,0 +1,9 @@
+<h1>All transactions for this category</h1>
+
+<%= link_to new_group_entity_path(@group.id), :remote => true do %>
+  <input type="button" class="btn btn-primary" value="Add transaction">
+<% end %>
+
+<br>
+
+<%= button_to "Delete", group_path(@group.id), html: {'data-turbo' => "false"}, :method => :delete, class: "btn btn-danger" %>
