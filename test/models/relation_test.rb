@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CreateRelationTest < ActiveSupport::TestCase
+class RelationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

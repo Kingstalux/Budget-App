@@ -1,8 +1,8 @@
-class CreateCreateEntities < ActiveRecord::Migration[7.0]
+class CreateGroups < ActiveRecord::Migration[7.0]
   def change
-    create_table :create_entities do |t|
+    create_table :groups do |t|
       t.string :name
-      t.integer :amount
+      t.string :icon
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
