@@ -1,20 +1,25 @@
 <%= render "partials/navbar" %>
 
-<h1>All groups for this user</h1>
+<section class="main">
 
-<section class="container">
+
     <%@groups.each do |group|%>
-      <div class="categroy">
-        <h3>Total amount: $<%=Group.total(group.id)%></h3>
+      <div class="category">
+        <img src=<%=group.icon%> alt="icon">
+
+        <div>
         <%= link_to group_path(group.id), :remote => true do %>
           <h3><%=group.name%></h3>
         <%end%>
-        <img src=<%=group.icon%> alt="icon">
         <p><%=group.created_at%></p>
+        </div>
+
+        <h3>$<%=Group.total(group.id)%></h3>
       </div>
     <%end%>
-</section>
 
 <%= link_to new_group_path, :remote => true do %>
-  <input type="button" class="btn btn-primary" value="Add Category">
+  <input type="button" class="btn btn-primary last" value="Add Category">
 <% end %>
+
+</section>
