@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ .body {
+     height: 100vh;
+     background-color: #f0f2f5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .box {
+     background-color: white;
+     height: 50vw;
+     width: 50vw;
+     padding: 1em;
+     border-radius: 0.5em;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     justify-content: space-evenly;
+     box-shadow: -5px 6px 14px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -5px 6px 14px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 6px 14px -1px rgba(0,0,0,0.75);
+    min-width: 15em;
+    min-height: 20em;
+ }
+
+ .box h1 {
+     color: #3778c2;
+     font-weight: bolder;
+     font-size: 2.5em;
+ }
+
+ .box a {
+     text-decoration: none;
+     color: white;
+ }
+
+ .btn {
+     display: block;
+     width: 100%;
+     color: white;
+     background-color: #3778c2;
+     padding: 15px;
+     border-radius: 0.5em;
+ }
+
+ .login form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .login form input {
+     display: block;
+     width: 100%;
+     padding: 15px;
+     border-radius: 0.5em;
+ }
+
+ @media screen and (min-width: 600px) {
+     .box {
+         width: 20em;
+         height: 24em;
+     }
+ }
