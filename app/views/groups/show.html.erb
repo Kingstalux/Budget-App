@@ -1,5 +1,11 @@
 <h1>All transactions for this category</h1>
 
+<%@relations.each do |relation|%>
+  <%entity = Entity.find(relation.entity_id)%>
+  <h3><%=entity.name%></h3>
+  <h3>$<%=entity.amount%>.0</h3>
+<%end%>
+
 <%= link_to new_entity_path, :remote => true do %>
   <input type="button" class="btn btn-primary" value="Add transaction">
 <% end %>

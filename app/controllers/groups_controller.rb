@@ -5,6 +5,7 @@ class GroupsController < ActionController::Base
 
   def show
     @group = Group.find(params[:id])
+    @relations = @group.relations.order('created_at DESC')
   end
 
   def new
