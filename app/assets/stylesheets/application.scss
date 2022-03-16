@@ -30,7 +30,7 @@
 
  .box {
      background-color: white;
-     height: 50vw;
+     height: 29em;
      width: 50vw;
      padding: 1em;
      border-radius: 0.5em;
@@ -41,7 +41,7 @@
     -webkit-box-shadow: -5px 6px 14px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -5px 6px 14px -1px rgba(0,0,0,0.75);
     min-width: 15em;
-    min-height: 20em;
+    max-width: 25em;
  }
 
  .box h1 {
@@ -65,10 +65,14 @@
      border-radius: 0.5em;
  }
 
-
- @media screen and (min-width: 600px) {
-     .box {
-         width: 20em;
-         height: 24em;
-     }
+ .login a {
+     color: #3778c2;
  }
+
+
+//  @media screen and (min-width: 600px) {
+//      .box {
+//          width: 20em;
+//          height: 24em;
+//      }
+//  }

@@ -22,12 +22,12 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
   <div class="mb-3">
-    <%= f.label :email %><br />
+    <%= f.label :email %><br/>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= f.label :password %><br />
+    <%= f.label :password %><br/>
     <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
   </div>
 
@@ -42,7 +42,7 @@
     <%= f.submit "Log in", class: "first-btn" %>
   </div>
 <% end %>
-
+<br/>
 <%= render "devise/shared/links" %>
 
 </div>
