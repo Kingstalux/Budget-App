@@ -65,8 +65,12 @@
      border-radius: 0.5em;
  }
 
- .login a {
+ .login a, .signup a {
      color: #3778c2;
+ }
+
+ .signup {
+     height: 36em;
  }
 
 
