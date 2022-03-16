@@ -1,12 +1,30 @@
 class EntitiesController < ActionController::Base
-    def index
-        @group = Group.find(params[:group_id])
-        @relations = @group.relations 
-    end
+  def new
+    @entity = current_user.entities.new
+    @relation = Relation.new(entity: @entity)
+  end
 
-    def new
-        @group = Group.find(params[:group_id])
-        @entity = Entity.new
+  def create
+    entity = current_user.entities.new(entity_params)
+    respond_to do |format|
+      format.html do
+        if entity.save
+          relation = Relation.create(group_id: group_params, entity_id: entity.id)
+          redirect_to group_path(relation.group_id)
+        else
+          render :new
+        end
+      end
     end
+  end
+
+  private
+
+  def entity_params
+    params.require(:entity).permit(:name, :amount)
+  end
+
+  def group_params
+    params[:entity][:relation][:group_id]
+  end
 end
-  

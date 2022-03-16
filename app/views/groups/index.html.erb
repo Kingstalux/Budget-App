@@ -6,14 +6,15 @@
 <section class="container">
     <%@groups.each do |group|%>
       <div class="categroy">
-        <%= link_to group_entities_path(group.id), :remote => true do %>
+        <%= link_to group_path(group.id), :remote => true do %>
           <h3><%=group.name%></h3>
         <%end%>
         <img src=<%=group.icon%> alt="icon">
+        <p><%=group.created_at%></p>
       </div>
     <%end%>
 </section>
 
-<%= link_to 'groups/new', :remote => true do %>
+<%= link_to new_group_path, :remote => true do %>
   <input type="button" class="btn btn-primary" value="Add Category">
 <% end %>

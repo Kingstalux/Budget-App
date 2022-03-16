@@ -1,23 +1,27 @@
 <h1>Add a new transaction here</h1>
 
-<%= form_with model: @group do |f| %>
+  <%= form_with model: @entity do |f| %>
+
+    <div class="mb-3">
+       <%= f.label :name %>
+       <%= f.text_field :name, required: true, class: "form-control"%>
+    </div>
+
+    <div class="mb-3">
+        <%= f.label :amount %>
+        <%= f.number_field :amount, required: true, min: 1, class: "form-control"%>
+    </div>
       
-  <div class="mb-3">
-      <%= f.label :name %>
-      <%= f.text_field :name, required: true, class: "form-control"%>
-  </div>
+    <div class="mb-3">
+      <%= f.fields_for(@relation) do |r| %>
+      <%= r.label :group%>
+      <%= r.select :group_id, current_user.groups.collect { |group| [group.name, group.id]}, {include_blank: true}, class: "form-control"%>
+     <% end %>   
+    </div>
 
-  <div class="mb-3">
-      <%= f.label :icon %>
-      <%= f.text_field :icon, required: true, class: "form-control"%>
-  </div>
-
-  <div class="mb-3">
+    <div class="mb-3">
       <%= f.submit class: "btn btn-primary" %>
-  </div>
-      
-<% end %>
+    </div>
 
-<%= link_to group_entities_path(@group.id), :remote => true do %>
-  <input type="button" class="btn btn-primary" value="Back">
-<% end %>
+    <%end%>
+
