@@ -1,4 +1,21 @@
-<h1>Add a new category here</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    
+    <section class="body">
+    <div class="box form">
+
+    <h1>Add A New Category</h1>
 
 <%= form_with model: @group do |f| %>
       
@@ -13,11 +30,18 @@
   </div>
 
   <div class="mb-3">
-      <%= f.submit "Create Category", class: "btn btn-primary" %>
+      <%= f.submit "Create Category", class: "first-btn" %>
   </div>
       
 <% end %>
 
 <%= link_to '/', :remote => true do %>
-  <input type="button" class="btn btn-primary" value="Back">
+  <input type="button" class="first-btn" value="Back">
 <% end %>
+
+</div>
+</section>
+  </body>
+</html>
+
+
