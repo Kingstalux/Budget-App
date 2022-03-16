@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ /*
+ *= require font-awesome
+ */
  @import "bootstrap";
 
  * {
@@ -71,6 +74,17 @@
 
  .signup {
      height: 36em;
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     padding-inline: 10px;
+     background-color: #3778c2;
+ }
+
+ .navbar-brand{
+     color: white;
  }
 
 
