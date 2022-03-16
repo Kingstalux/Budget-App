@@ -1,4 +1,21 @@
-<h1>Add a new transaction here</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    
+    <section class="body">
+    <div class="box form">
+
+    <h1>Add New Transaction</h1>
 
   <%= form_with model: @entity do |f| %>
 
@@ -20,8 +37,17 @@
     </div>
 
     <div class="mb-3">
-      <%= f.submit class: "btn btn-primary" %>
+      <%= f.submit class: "first-btn" %>
     </div>
 
     <%end%>
+
+    </div>
+    </section>
+
+
+  </body>
+</html>
+
+
 
