@@ -1,24 +1,73 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Budget App
+This is a application where a user can keep track of various transactions in a group so as to track and moniter their expenses.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## Built With
 
-* Database creation
+  - Ruby on Rails
+  - PostgreSQL
+  - Bootstrap
+  - Rspec
+  - Devise
 
-* Database initialization
+## Live link
+- [Budget App](https://enigmatic-falls-38340.herokuapp.com/)
 
-* How to run the test suite
+## Demo presentation
+- [Presentation](https://www.loom.com/share/c5c29898cc054c75b1c7af201b767101) 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Preview App
+(![Annotation 2022-03-17 110142](https://user-images.githubusercontent.com/85113567/158785416-20cecbce-0d0f-4a0a-87a1-5b01c8c5f28f.jpg)
 
-* ...
+
+## Getting Started
+
+Follow the steps bellow to get a local copy up and running.
+
+- Run `git clone https://github.com/Kingstalux/Budget-App.git` from your terminal to clone the repo from GitHub.
+
+- Run `cd budget-app` to move to the project folder.
+
+-  Run `bundle install` from the command line to install dependencies.
+
+-  Run `rails db:create`, and `rails db:migrate` to create database.
+
+-  Run `rails s` to run the local server
+
+
+
+
+
+## Authors
+
+👤 **Ngu Kingsely**
+
+- GitHub: [@Kingstalux](https://github.com/Kingstalux)
+- Twitter: [@NguKingsley](https://twitter.com/NguKingsley)
+- LinkedIn: [Ngu Kingsely](https://www.linkedin.com/in/ngu-kingsely-junior-cho-974b60136/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- Original design idea by Gregoire Vella on Behance.
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
