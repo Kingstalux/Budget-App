@@ -14,8 +14,10 @@
   <body>
     
     <nav class="navbar navbar-expand-lg">
-
-      <i class="fa fa-arrow-left fa-lg" style="color:white"></i>
+      
+      <%= link_to groups_path, :remote => true do %>
+        <i class="fa fa-arrow-left fa-lg" style="color:white"></i>
+      <%end%>
 
       <a class="navbar-brand" href="/groups">Transactions</a>
    
