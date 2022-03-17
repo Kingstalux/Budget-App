@@ -18,7 +18,8 @@ This is a application where a user can keep track of various transactions in a g
 - [Budget App](https://enigmatic-falls-38340.herokuapp.com/)
 
 ## Demo presentation
-
+## Preview App
+(![Annotation 2022-03-17 110142](https://user-images.githubusercontent.com/85113567/158785416-20cecbce-0d0f-4a0a-87a1-5b01c8c5f28f.jpg)
 
 
 ## Getting Started
