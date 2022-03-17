@@ -8,9 +8,16 @@ This is a application where a user can keep track of various transactions in a g
 
 ## Built With
 
-  - Ruby/Rails
+  - Ruby on Rails
   - PostgreSQL
+  - Bootstrap
+  - Rspec
+  - Devise
 
+## Live link
+- [Budget App](https://enigmatic-falls-38340.herokuapp.com/)
+
+## Demo presentation
 
 
 
