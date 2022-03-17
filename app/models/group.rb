@@ -5,7 +5,7 @@ class Group < ApplicationRecord
   validates :icon, presence: true
 
   def created_at
-    attributes['created_at'].strftime("%d %b %Y")
+    attributes['created_at'].strftime('%d %b %Y')
   end
 
   def self.total(id)
