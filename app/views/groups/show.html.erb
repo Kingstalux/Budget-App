@@ -11,10 +11,6 @@
   <input type="button" class="btn btn-primary" value="Add transaction">
 <% end %>
 
-<br>
-
-<%= button_to "Delete Category", group_path(@group.id), html: {'data-turbo' => "false"}, :method => :delete, class: "btn btn-danger" %>
-
 <%= link_to groups_path, :remote => true do %>
   <input type="button" class="btn btn-primary" value="Back">
 <% end %>

@@ -4,6 +4,10 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
+  def created_at
+    attributes['created_at'].strftime("%d %b %Y")
+  end
+
   def self.total(id)
     group = Group.find(id)
     relations = group.relations
