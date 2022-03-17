@@ -124,3 +124,18 @@
   text-decoration: none;
   color: #434b54;
 }
+
+.credit {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2em;
+    color: #434b54;
+    height: 6.5em;
+}
+
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+}

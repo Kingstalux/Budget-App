@@ -1,11 +1,26 @@
 <%= render "partials/nav" %>
-<h1>All transactions for this category</h1>
+<div class="credit">
+  <h3>Gift Credit</h3>
+  <h3>$<%=Group.total(@group.id)%>.00</h3>
+</div>
+
+<section class="main">
 
 <%@relations.each do |relation|%>
   <%entity = Entity.find(relation.entity_id)%>
-  <h3><%=entity.name%></h3>
-  <h3>$<%=entity.amount%>.0</h3>
+  <div class="category">
+    <img src=<%=@group.icon%> alt="icon">
+    
+    <div class="flex">
+      <h3><%=entity.name%></h3>
+      <p><%=entity.created_at%></p>
+    </div>
+
+    <h3>$<%=entity.amount%>.00</h3>
+  </div>
 <%end%>
+
+<div class="flex1">
 
 <%= link_to new_entity_path, :remote => true do %>
   <input type="button" class="btn btn-primary" value="Add transaction">
@@ -14,3 +29,7 @@
 <%= link_to groups_path, :remote => true do %>
   <input type="button" class="btn btn-primary" value="Back">
 <% end %>
+
+</div>
+
+</section>
