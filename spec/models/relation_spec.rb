@@ -11,5 +11,4 @@ RSpec.describe Relation, type: :model do
   it 'subject should be valid' do
     expect(@relation).to be_valid
   end
-
 end
