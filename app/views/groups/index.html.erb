@@ -15,7 +15,7 @@
         </div>
 
         <div class="flex">
-        <h3>$<%=Group.total(group.id)%>.0</h3>
+        <h3>$<%=Group.total(group.id)%>.00</h3>
         <%= button_to "Delete", group_path(group.id), html: {'data-turbo' => "false"}, :method => :delete, class: "btn btn-danger" %>
         </div>
 
