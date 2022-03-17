@@ -43,7 +43,7 @@ Follow the steps bellow to get a local copy up and running.
 
 
 
-## Authors
+## Author
 
 👤 **Ngu Kingsely**
 
