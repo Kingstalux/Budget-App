@@ -18,6 +18,12 @@ class EntitiesController < ActionController::Base
     end
   end
 
+  def destroy
+    @entity = current_user.entities.find(params[:id])
+    @entity.destroy
+    redirect_to groups_path
+  end
+
   private
 
   def entity_params
